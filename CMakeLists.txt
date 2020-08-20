@@ -131,6 +131,9 @@ cmake_dependent_option(
 cmake_dependent_option(
     CAFFE2_USE_MSVC_STATIC_RUNTIME "Using MSVC static runtime libraries" ON
     "NOT BUILD_SHARED_LIBS" OFF)
+cmake_dependent_option(
+    DYNAMIC_TARGET "Expecting to link Torch dynamically" OFF
+    "NOT BUILD_SHARED_LIBS" ON)
 option(BUILD_TEST "Build C++ test binaries (need gtest and gbenchmark)" OFF)
 option(BUILD_JNI "Build JNI bindings" OFF)
 cmake_dependent_option(
