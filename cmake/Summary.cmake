@@ -43,6 +43,7 @@ function(caffe2_print_configuration_summary)
   endif()
   message(STATUS "  BUILD_CAFFE2_OPS      : ${BUILD_CAFFE2_OPS}")
   message(STATUS "  BUILD_SHARED_LIBS     : ${BUILD_SHARED_LIBS}")
+  message(STATUS "  CAFFE2_USE_MSVC_STATIC_RUNTIME     : ${CAFFE2_USE_MSVC_STATIC_RUNTIME}")
   message(STATUS "  BUILD_TEST            : ${BUILD_TEST}")
   message(STATUS "  BUILD_JNI             : ${BUILD_JNI}")
 
