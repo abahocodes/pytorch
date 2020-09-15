@@ -34,6 +34,12 @@
 #include <queue>
 #include <TH/TH.h>
 
+#ifdef C10_USE_MSVC_STATIC_RUNTIME
+#pragma message "Adam flag is on"
+#else
+#pragma message "Adam flag is off"
+#endif
+
 namespace torch { namespace autograd {
 
 namespace {
