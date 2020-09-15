@@ -36,6 +36,7 @@
 
 #ifdef C10_USE_MSVC_STATIC_RUNTIME
 #pragma message "Adam flag is on"
+blurg shouldn't compile
 #else
 #pragma message "Adam flag is off"
 #endif
