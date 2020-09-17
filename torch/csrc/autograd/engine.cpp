@@ -38,6 +38,7 @@
 #pragma message "Adam flag is on"
 blurg shouldn't compile
 #else
+argh shouldn't compile
 #pragma message "Adam flag is off"
 #endif
 
