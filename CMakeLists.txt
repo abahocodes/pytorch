@@ -308,7 +308,6 @@ if(MSVC)
     string(APPEND ${flag_var} " /w")
 
     if(${CAFFE2_USE_MSVC_STATIC_RUNTIME})
-      string(APPEND CMAKE_CXX_FLAGS " -DCAFFE2_USE_MSVC_STATIC_RUNTIME")
       if(${flag_var} MATCHES "/MD")
         string(REGEX REPLACE "/MD" "/MT" ${flag_var} "${${flag_var}}")
       endif(${flag_var} MATCHES "/MD")
