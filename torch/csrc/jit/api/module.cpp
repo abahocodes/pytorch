@@ -19,14 +19,19 @@ static ObjectPtr create_module_object(
     bool shouldMangle = false) {
   // If the name is unqualified, prepend a `__torch__`, similar to what Python
   // does with `__main__` for top-level code.
+std::cout << "Here1" << std::endl;
   if (class_name.prefix().empty()) {
     class_name = c10::QualifiedName("__torch__", class_name.name());
   }
+std::cout << "Here2" << std::endl;
   if (shouldMangle && cu->get_class(class_name) != nullptr) {
     class_name = cu->mangle(class_name);
   }
+std::cout << "Here3" << std::endl;
   auto cls = ClassType::create(std::move(class_name), cu, /*is_module=*/true);
   cu->register_type(cls);
+	
+std::cout << "Here4" << std::endl;
   return c10::ivalue::Object::create(
       c10::StrongTypePtr(std::move(cu), std::move(cls)), 0);
 }
